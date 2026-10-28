@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="da">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Marius A. Folkmann</title>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: "Helvetica Neue", Arial, sans-serif;
+            background-color: #1a1a1a;
+            color: #e5e5e5;
+        }
+
+        /* --- BACK ARROW (scroll med) --- */
+        .back-arrow {
+            position: fixed;     /* ← følger scroll */
+            top: 60px;          /* ← justér op/ned */
+            left: 40px;          /* ← justér side/side */
+            font-size: 32px;
+            color: #e5e5e5;
+            text-decoration: none;
+            font-weight: 300;
+            z-index: 1500;
+            transition: color 0.3s ease, transform 0.3s ease;
+        }
+
+        .back-arrow:hover {
+            color: #999;
+            transform: translateX(-4px);
+        }
+
+        /* --- NAVIGATION --- */
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: #111;
+            border-bottom: 1px solid #333;
+            padding: 12px 40px;
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            gap: 300px;
+            z-index: 1000;
+            letter-spacing: 2px;
+        }
+
+        nav .logo {
+            font-size: 20px;
+            font-weight: 300;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #e5e5e5;
+            margin-left: 25px;
+            font-size: 14px;
+            text-transform: uppercase;
+        }
+
+        nav a:hover {
+            color: #999;
+        }
+
+        /* --- HERO --- */
+        .hero {
+            margin-top: 120px;
+            text-align: center;
+            padding: 40px 20px;
+        }
+
+        .hero h1 {
+            font-size: 48px;
+            font-weight: 200;
+            letter-spacing: 3px;
+            color: #f0f0f0;
+        }
+
+        .hero p {
+            font-size: 18px;
+            color: #aaa;
+        }
+
+        /* --- GENRE NAVIGATION --- */
+        .genres {
+            max-width: 900px;
+            margin: 10px auto 40px;
+            text-align: center;
+        }
+
+        .genres a {
+            text-decoration: none;
+            color: #888;
+            margin: 0 15px;
+            font-size: 14px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .genres a:hover {
+            color: #fff;
+        }
+
+        /* --- MASONRY GALLERY --- */
+        .masonry {
+            column-count: 3;
+            column-gap: 30px;
+            max-width: 1500px;
+            margin: 0 auto;
+            padding: 40px 40px 80px;
+        }
+
+        .masonry img {
+            width: 100%;
+            margin-bottom: 30px;
+            display: block;
+            border-radius: 4px;
+            background: #2a2a2a;
+            border: 1px solid #444;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.4);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            cursor: pointer;
+        }
+
+        .masonry img:hover {
+            transform: scale(1.02);
+            box-shadow: 0 12px 28px rgba(0,0,0,0.55);
+        }
+
+        @media (max-width: 1200px) {
+            .masonry { column-count: 2; }
+        }
+
+        @media (max-width: 700px) {
+            .masonry { column-count: 1; }
+        }
+
+        /* --- LIGHTBOX --- */
+        .lightbox {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.85);
+            display: none;
+            justify-content: center;
+            align-items: center;
+            z-index: 2000;
+        }
+
+        .lightbox img {
+            max-width: 90%;
+            max-height: 90%;
+            border-radius: 4px;
+            box-shadow: 0 0 40px rgba(0,0,0,0.8);
+        }
+
+        .lightbox-close {
+            position: fixed;
+            top: 30px;
+            right: 40px;
+            font-size: 40px;
+            color: #fff;
+            cursor: pointer;
+            font-weight: 300;
+        }
+
+        footer {
+            text-align: center;
+            padding: 40px;
+            color: #777;
+            font-size: 14px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- BACK ARROW -->
+    <a href="../projectBlog.html" class="back-arrow">←</a>
+
+    <nav>
+        <div class="logo">Marius A. Folkmann</div>
+        <div class="links">
+            <a href="../index.html">Work</a>
+            <a href="../Film.html">Film Work</a>
+            <a href="../about.html">About</a>
+            <a href="../projectBlog.html">Archive</a>
+        </div>
+    </nav>
+
+    <section class="hero">
+        <h1>Video for den rytmiske</h1>
+        <p></p>
+    </section>
+
+<section id="work" class="masonry">
+        <img src="danse/1.avif" alt="">
+        <img src="danse/2.avif" alt="">
+        <img src="danse/3.avif" alt="">
+        <img src="danse/4.avif" alt="">
+        <img src="danse/5.avif" alt="">
+    </section>
+    
+    <div style="padding:75% 0 0 0;position:relative;">
+        <iframe src="https://player.vimeo.com/video/1229464128?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
+        frameborder="0"
+        allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share"
+        referrerpolicy="strict-origin-when-cross-origin"
+        style="position:absolute;top:0;left:0;width:100%;height:100%;"
+        title="Showreel - Marius Folkmann (1080p)">
+        </iframe>
+    </div>
+    <script src="https://player.vimeo.com/api/player.js"></script>
+
+    <!-- LIGHTBOX -->
+    <div class="lightbox" id="lightbox">
+        <span class="lightbox-close" id="lightbox-close">&times;</span>
+        <img id="lightbox-img" src="">
+    </div>
+
+    <footer>
+        © 2026 Marius A. Folkmann – All Rights Reserved
+    </footer>
+
+    <script>
+        const galleryImages = document.querySelectorAll('.masonry img');
+        const lightbox = document.getElementById('lightbox');
+        const lightboxImg = document.getElementById('lightbox-img');
+        const lightboxClose = document.getElementById('lightbox-close');
+
+        galleryImages.forEach(img => {
+            img.addEventListener('click', () => {
+                lightbox.style.display = 'flex';
+                lightboxImg.src = img.src;
+            });
+        });
+
+        lightboxClose.addEventListener('click', () => {
+            lightbox.style.display = 'none';
+        });
+
+        lightbox.addEventListener('click', (e) => {
+            if (e.target !== lightboxImg) {
+                lightbox.style.display = 'none';
+            }
+        });
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="da">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Marius A. Folkmann</title>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: "Helvetica Neue", Arial, sans-serif;
+            background-color: #1a1a1a;
+            color: #e5e5e5;
+        }
+
+        /* --- NAVIGATION --- */
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: #111;
+            border-bottom: 1px solid #333;
+            padding: 12px 40px;
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            gap: 300px;
+            z-index: 1000;
+            letter-spacing: 2px;
+        }
+
+        nav .logo {
+            font-size: 20px;
+            font-weight: 300;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #e5e5e5;
+            margin-left: 25px;
+            font-size: 14px;
+            text-transform: uppercase;
+        }
+
+        nav a:hover {
+            color: #999;
+        }
+
+        /* --- HERO --- */
+        .hero {
+            margin-top: 120px;
+            text-align: center;
+            padding: 40px 20px;
+        }
+
+        .hero h1 {
+            font-size: 48px;
+            font-weight: 200;
+            letter-spacing: 3px;
+            color: #f0f0f0;
+        }
+
+        .hero p {
+            font-size: 18px;
+            color: #aaa;
+        }
+
+        /* --- GENRE NAVIGATION --- */
+        .genres {
+            max-width: 900px;
+            margin: 10px auto 40px;
+            text-align: center;
+        }
+
+        .genres a {
+            text-decoration: none;
+            color: #888;
+            margin: 0 15px;
+            font-size: 14px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .genres a:hover {
+            color: #fff;
+        }
+
+        /* --- MASONRY GALLERY (TILBAGE) --- */
+        .masonry {
+            column-count: 3;
+            column-gap: 30px;
+            max-width: 1500px;
+            margin: 0 auto;
+            padding: 40px 40px 80px;
+        }
+
+        .masonry img {
+            width: 100%;
+            margin-bottom: 30px;
+            display: block;
+            border-radius: 4px;
+            background: #2a2a2a;
+            border: 1px solid #444;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.4);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            cursor: pointer;
+        }
+
+        .masonry img:hover {
+            transform: scale(1.02);
+            box-shadow: 0 12px 28px rgba(0,0,0,0.55);
+        }
+
+        @media (max-width: 1200px) {
+            .masonry { column-count: 2; }
+        }
+
+        @media (max-width: 700px) {
+            .masonry { column-count: 1; }
+        }
+
+        /* --- LIGHTBOX --- */
+        .lightbox {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.85);
+            display: none;
+            justify-content: center;
+            align-items: center;
+            z-index: 2000;
+        }
+
+        .lightbox img {
+            max-width: 90%;
+            max-height: 90%;
+            border-radius: 4px;
+            box-shadow: 0 0 40px rgba(0,0,0,0.8);
+        }
+
+        .lightbox-close {
+            position: fixed;
+            top: 30px;
+            right: 40px;
+            font-size: 40px;
+            color: #fff;
+            cursor: pointer;
+            font-weight: 300;
+        }
+
+        footer {
+            text-align: center;
+            padding: 40px;
+            color: #777;
+            font-size: 14px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav>
+        <div class="logo">Marius A. Folkmann</div>
+        <div class="links">
+            <a href="index.html">Work</a>
+            <a href="Film.html">Film Work</a>
+            <a href="about.html">About</a>
+            <a href="projectBlog.html">Archive</a>
+        </div>
+    </nav>
+
+    <section class="hero">
+        <h1>Gallery</h1>
+        <p>Curated photography.</p>
+    </section>
+
+    <!-- GENRE NAVIGATION -->
+    <div class="genres">
+        <a href="index.html">Street</a>
+        <a href="gallery_portrait.html">Portræt</a>
+        <a href="gallery_fashion.html">Fashion</a>
+        <a href="gallery_commercial.html">Kommercielt</a>
+    </div>
+
+    <!-- MASONRY GALLERY -->
+    <section id="work" class="masonry">
+		<img src="billeder/billede25.avif" alt="">
+		<img src="billeder/billede24.avif" alt="">
+		<img src="billeder/billede23.avif" alt="">
+		<img src="billeder/billede22.avif" alt="">
+		<img src="billeder/billede21.avif" alt="">
+        <img src="billeder/billede2.avif" alt="">
+        <img src="billeder/billede3.avif" alt="">
+        <img src="billeder/billede4.avif" alt="">
+        <img src="billeder/billede5.avif" alt="">
+        <img src="billeder/billede7.avif" alt="">
+        <img src="billeder/billede8.avif" alt="">
+        <img src="billeder/billede9.avif" alt="">
+        <img src="billeder/billede10.avif" alt="">
+        <img src="billeder/billede11.avif" alt="">
+        <img src="billeder/billede12.avif" alt="">
+        <img src="billeder/billede13.avif" alt="">
+        <img src="billeder/billede14.avif" alt="">
+        <img src="billeder/billede15.avif" alt="">
+        <img src="billeder/billede16.avif" alt="">
+        <img src="billeder/billede17.avif" alt="">
+        <img src="billeder/billede18.avif" alt="">
+        <img src="billeder/billede19.avif" alt="">
+        <img src="billeder/billede20.avif" alt="">
+    </section>
+
+    <!-- LIGHTBOX -->
+    <div class="lightbox" id="lightbox">
+        <span class="lightbox-close" id="lightbox-close">&times;</span>
+        <img id="lightbox-img" src="">
+    </div>
+
+    <footer>
+        © 2026 Marius A. Folkmann – All Rights Reserved
+    </footer>
+
+    <script>
+        const galleryImages = document.querySelectorAll('.masonry img');
+        const lightbox = document.getElementById('lightbox');
+        const lightboxImg = document.getElementById('lightbox-img');
+        const lightboxClose = document.getElementById('lightbox-close');
+
+        galleryImages.forEach(img => {
+            img.addEventListener('click', () => {
+                lightbox.style.display = 'flex';
+                lightboxImg.src = img.src;
+            });
+        });
+
+        lightboxClose.addEventListener('click', () => {
+            lightbox.style.display = 'none';
+        });
+
+        lightbox.addEventListener('click', (e) => {
+            if (e.target !== lightboxImg) {
+                lightbox.style.display = 'none';
+            }
+        });
+    </script>
+
+</body>
+</html>

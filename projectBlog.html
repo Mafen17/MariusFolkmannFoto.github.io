@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="da">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Marius A. Folkmann</title>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: "Helvetica Neue", Arial, sans-serif;
+            background-color: #1a1a1a;
+            color: #e5e5e5;
+        }
+
+        /* --- NAVIGATION --- */
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: #111;
+            border-bottom: 1px solid #333;
+            padding: 12px 40px;
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            gap: 300px;
+            z-index: 1000;
+            letter-spacing: 2px;
+        }
+
+        nav .logo {
+            font-size: 20px;
+            font-weight: 300;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #e5e5e5;
+            margin-left: 25px;
+            font-size: 14px;
+            text-transform: uppercase;
+        }
+
+        nav a:hover {
+            color: #999;
+        }
+
+        /* --- HERO --- */
+        .hero {
+            margin-top: 120px;
+            text-align: center;
+            padding: 40px 20px;
+        }
+
+        .hero h1 {
+            font-size: 48px;
+            font-weight: 200;
+            letter-spacing: 3px;
+            color: #f0f0f0;
+        }
+
+        .hero p {
+            font-size: 18px;
+            color: #aaa;
+        }
+
+        /* --- PROJECT GRID --- */
+        .projects {
+            max-width: 1200px;
+            margin: 40px auto 80px;
+            padding: 0 20px;
+
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            gap: 40px;
+        }
+
+        .project-card {
+            background: #111;
+            border: 1px solid #333;
+            border-radius: 6px;
+            padding: 20px;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.4);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .project-card:hover {
+            transform: scale(1.02);
+            box-shadow: 0 12px 28px rgba(0,0,0,0.55);
+        }
+
+        .project-card img {
+            width: 100%;
+            border-radius: 4px;
+            margin-bottom: 15px;
+            cursor: pointer;
+        }
+
+        .project-card h2 {
+            font-size: 24px;
+            font-weight: 300;
+            margin-bottom: 10px;
+        }
+
+        .project-card p {
+            font-size: 16px;
+            color: #ccc;
+            line-height: 1.5;
+        }
+
+        .project-card a {
+            color: #fff;
+            text-decoration: underline;
+        }
+
+        /* --- LIGHTBOX --- */
+        .lightbox {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.85);
+            display: none;
+            justify-content: center;
+            align-items: center;
+            z-index: 2000;
+        }
+
+        .lightbox img {
+            max-width: 90%;
+            max-height: 90%;
+            border-radius: 4px;
+            box-shadow: 0 0 40px rgba(0,0,0,0.8);
+        }
+
+        .lightbox-close {
+            position: fixed;
+            top: 30px;
+            right: 40px;
+            font-size: 40px;
+            color: #fff;
+            cursor: pointer;
+            font-weight: 300;
+        }
+
+        footer {
+            text-align: center;
+            padding: 40px;
+            color: #777;
+            font-size: 14px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav>
+        <div class="logo">Marius A. Folkmann</div>
+        <div class="links">
+            <a href="index.html">Work</a>
+            <a href="Film.html">Film Work</a>
+            <a href="about.html">About</a>
+            <a href="projectBlog.html">Archive</a>
+        </div>
+    </nav>
+
+    <section class="hero">
+        <h1>Project Archive</h1>
+        <p>En samling af projekter, øvelser, eksperimenter og kunst projekter.</p>
+    </section>
+
+    <!-- PROJECT GRID -->
+    <div class="projects">
+
+
+
+		        <!-- PROJECT 5 -->
+        <div class="project-card">
+            <img src="archive/Perception/Kontrakt.avif" alt="Projekt 5">
+            <h2>Perception (WIP)</h2>
+            <p>En samling af billeder af folk med blindfold på. Serien udforsker perception, og hvordan vi er blinde på forskellige ting. Serien inviterer publikummet til at vende blikket indad og stille spørgsmålet "Hvad er jeg blind over for?".</p>
+            <a href="archive/Perception.html">Se mere</a>
+        </div>
+		
+				<!-- PROJECT 4 -->
+        <div class="project-card">
+            <img src="archive/kunst og tek/sem3/1.avif" alt="Projekt 4">
+            <h2>3.Semester</h2>
+            <p>Dette Semester dykkede vi ned i Dynamiske systemer. Som projekt valgte vi at holde en afsked/begravelse for sygehus Nord bygningen i Aalborg</p>
+            <a href="archive/sem3.html">Se mere</a>
+        </div>
+		
+		        <!-- PROJECT 3 -->
+        <div class="project-card">
+            <img src="archive/danse/1.avif" alt="Projekt 3">
+            <h2>Video for den rytmiske </h2>
+            <p>Samarbejde med den rytmiske på nordkraft i Aalborg</p>
+            <a href="archive/danse.html">Se mere</a>
+        </div>
+
+        <!-- PROJECT 2 -->
+        <div class="project-card">
+            <img src="archive/kunst og tek/sem2/1.avif" alt="Projekt 2">
+            <h2>2. Semester</h2>
+            <p>Rum, Kunst og teknologi. Dette semester </p>
+            <a href="archive/sem2.html">Se mere</a>
+        </div>
+
+        <!-- PROJECT 1 -->
+        <div class="project-card">
+            <img src="archive/kunst og tek/sem1/7.avif" alt="Projekt 1">
+            <h2>1.Semester</h2>
+            <p>Dette semester kiggede vi på Kinetisk kunst. Min gruppe valgte derfor at bygge et artefakt i form af en vandmand</p>
+            <a href="archive/sem1.html">Se mere</a>
+        </div>
+
+    </div>
+
+    <!-- LIGHTBOX -->
+    <div class="lightbox" id="lightbox">
+        <span class="lightbox-close" id="lightbox-close">&times;</span>
+        <img id="lightbox-img" src="">
+    </div>
+
+    <footer>
+        © 2026 Marius A. Folkmann – All Rights Reserved
+    </footer>
+
+    <script>
+        const projectImages = document.querySelectorAll('.project-card img');
+        const lightbox = document.getElementById('lightbox');
+        const lightboxImg = document.getElementById('lightbox-img');
+        const lightboxClose = document.getElementById('lightbox-close');
+
+        projectImages.forEach(img => {
+            img.addEventListener('click', () => {
+                lightbox.style.display = 'flex';
+                lightboxImg.src = img.src;
+            });
+        });
+
+        lightboxClose.addEventListener('click', () => {
+            lightbox.style.display = 'none';
+        });
+
+        lightbox.addEventListener('click', (e) => {
+            if (e.target !== lightboxImg) {
+                lightbox.style.display = 'none';
+            }
+        });
+    </script>
+
+</body>
+</html>
