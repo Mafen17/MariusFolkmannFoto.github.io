@@ -15,32 +15,40 @@
 
         /* --- NAVIGATION --- */
         nav {
-            position: fixed;
-            top: 0;
-            width: 100%;
-            background: #111;
-            border-bottom: 1px solid #333;
-            padding: 12px 40px;
-            display: flex;
-            justify-content: flex-start;
-            align-items: center;
-            gap: 300px;
-            z-index: 1000;
-            letter-spacing: 2px;
-        }
+			position: fixed;
+			top: 0;
+			width: 100%;
+			background: #111;
+			border-bottom: 1px solid #333;
+			padding: 12px 20px;
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			box-sizing: border-box;
+			z-index: 1000;
+			letter-spacing: 2px;
+}
 
-        nav .logo {
-            font-size: 20px;
-            font-weight: 300;
-        }
+		nav .logo {
+			font-size: 20px;
+			font-weight: 300;
+			white-space: nowrap;
+}
 
-        nav a {
-            text-decoration: none;
-            color: #e5e5e5;
-            margin-left: 25px;
-            font-size: 14px;
-            text-transform: uppercase;
-        }
+		nav .links {
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: flex-end;
+			gap:20px;
+			align-items: center;
+}
+
+		nav a {
+			text-decoration: none;
+			color: #e5e5e5;
+			font-size: 14px;
+			text-transform: uppercase;
+}
 
         nav a:hover {
             color: #999;
@@ -65,53 +73,58 @@
             color: #aaa;
         }
 
-        /* --- PROJECT GRID --- */
-        .projects {
-            max-width: 1200px;
-            margin: 40px auto 80px;
-            padding: 0 20px;
-
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
-            gap: 40px;
+        /* --- GENRE NAVIGATION --- */
+        .genres {
+            max-width: 900px;
+            margin: 10px auto 40px;
+            text-align: center;
         }
 
-        .project-card {
-            background: #111;
-            border: 1px solid #333;
-            border-radius: 6px;
-            padding: 20px;
+        .genres a {
+            text-decoration: none;
+            color: #888;
+            margin: 0 15px;
+            font-size: 14px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .genres a:hover {
+            color: #fff;
+        }
+
+        /* --- MASONRY GALLERY (TILBAGE) --- */
+        .masonry {
+            column-count: 3;
+            column-gap: 30px;
+            max-width: 1500px;
+            margin: 0 auto;
+            padding: 40px 40px 80px;
+        }
+
+        .masonry img {
+            width: 100%;
+            margin-bottom: 30px;
+            display: block;
+            border-radius: 4px;
+            background: #2a2a2a;
+            border: 1px solid #444;
             box-shadow: 0 8px 20px rgba(0,0,0,0.4);
             transition: transform 0.3s ease, box-shadow 0.3s ease;
+            cursor: pointer;
         }
 
-        .project-card:hover {
+        .masonry img:hover {
             transform: scale(1.02);
             box-shadow: 0 12px 28px rgba(0,0,0,0.55);
         }
 
-        .project-card img {
-            width: 100%;
-            border-radius: 4px;
-            margin-bottom: 15px;
-            cursor: pointer;
+        @media (max-width: 1200px) {
+            .masonry { column-count: 2; }
         }
 
-        .project-card h2 {
-            font-size: 24px;
-            font-weight: 300;
-            margin-bottom: 10px;
-        }
-
-        .project-card p {
-            font-size: 16px;
-            color: #ccc;
-            line-height: 1.5;
-        }
-
-        .project-card a {
-            color: #fff;
-            text-decoration: underline;
+        @media (max-width: 700px) {
+            .masonry { column-count: 1; }
         }
 
         /* --- LIGHTBOX --- */
@@ -151,6 +164,68 @@
             color: #777;
             font-size: 14px;
         }
+		
+		/* ---------- MOBILE ---------- */
+@media (max-width: 768px) {
+
+    nav {
+        flex-direction: column;
+        gap: 10px;
+        padding: 15px;
+    }
+
+    nav .logo {
+        font-size: 18px;
+        text-align: center;
+    }
+
+    nav .links {
+        justify-content: center;
+        gap: 10px;
+    }
+
+    nav a {
+        margin: 0;
+        font-size: 12px;
+    }
+
+    .hero {
+        margin-top: 140px;
+        padding: 20px;
+    }
+
+    .hero h1 {
+        font-size: 32px;
+    }
+
+    .hero p {
+        font-size: 16px;
+    }
+
+    .genres {
+        padding: 0 15px;
+    }
+
+    .genres a {
+        display: inline-block;
+        margin: 6px;
+        font-size: 12px;
+    }
+
+    .masonry {
+        column-count: 1;
+        padding: 15px 8px 40px;
+    }
+	.lightbox img {
+		max-width: 95%;
+		max-height: 85%;
+	}
+	.masonry img {
+        border-radius: 0;
+        border: none;
+    }
+}
+
     </style>
 </head>
 
