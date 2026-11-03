@@ -15,32 +15,40 @@
 
         /* --- NAVIGATION --- */
         nav {
-            position: fixed;
-            top: 0;
-            width: 100%;
-            background: #111;
-            border-bottom: 1px solid #333;
-            padding: 12px 40px;
-            display: flex;
-            justify-content: flex-start;
-            align-items: center;
-            gap: 300px;
-            z-index: 1000;
-            letter-spacing: 2px;
-        }
+			position: fixed;
+			top: 0;
+			width: 100%;
+			background: #111;
+			border-bottom: 1px solid #333;
+			padding: 12px 20px;
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			box-sizing: border-box;
+			z-index: 1000;
+			letter-spacing: 2px;
+}
 
-        nav .logo {
-            font-size: 20px;
-            font-weight: 300;
-        }
+		nav .logo {
+			font-size: 20px;
+			font-weight: 300;
+			white-space: nowrap;
+}
 
-        nav a {
-            text-decoration: none;
-            color: #e5e5e5;
-            margin-left: 25px;
-            font-size: 14px;
-            text-transform: uppercase;
-        }
+		nav .links {
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: flex-end;
+			gap:20px;
+			align-items: center;
+}
+
+		nav a {
+			text-decoration: none;
+			color: #e5e5e5;
+			font-size: 14px;
+			text-transform: uppercase;
+}
 
         nav a:hover {
             color: #999;
@@ -156,6 +164,68 @@
             color: #777;
             font-size: 14px;
         }
+		
+		/* ---------- MOBILE ---------- */
+@media (max-width: 768px) {
+
+    nav {
+        flex-direction: column;
+        gap: 10px;
+        padding: 15px;
+    }
+
+    nav .logo {
+        font-size: 18px;
+        text-align: center;
+    }
+
+    nav .links {
+        justify-content: center;
+        gap: 10px;
+    }
+
+    nav a {
+        margin: 0;
+        font-size: 12px;
+    }
+
+    .hero {
+        margin-top: 140px;
+        padding: 20px;
+    }
+
+    .hero h1 {
+        font-size: 32px;
+    }
+
+    .hero p {
+        font-size: 16px;
+    }
+
+    .genres {
+        padding: 0 15px;
+    }
+
+    .genres a {
+        display: inline-block;
+        margin: 6px;
+        font-size: 12px;
+    }
+
+    .masonry {
+        column-count: 1;
+        padding: 15px 8px 40px;
+    }
+	.lightbox img {
+		max-width: 95%;
+		max-height: 85%;
+	}
+	.masonry img {
+        border-radius: 0;
+        border: none;
+    }
+}
+
     </style>
 </head>
 
@@ -172,8 +242,8 @@
     </nav>
 
     <section class="hero">
-        <h1>Gallery</h1>
-        <p>Curated photography.</p>
+        <h1>Marius A. Folkmann</h1>
+        <p>Udvalgte Billeder</p>
     </section>
 
     <!-- GENRE NAVIGATION -->
